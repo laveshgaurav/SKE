@@ -1,43 +1,57 @@
 var firebaseConfig = {
-  apiKey: 'AIzaSyD12RzbsChfPXHFlUpMYP8i782nmwYK71U',
-  authDomain: 'fir-6410a.firebaseapp.com',
-  databaseURL: 'https://fir-6410a.firebaseio.com',
-  projectId: 'fir-6410a',
-  storageBucket: 'fir-6410a.appspot.com',
-  messagingSenderId: '561239148822',
-  appId: '1:561239148822:web:fadad10b6d1f553824e837'
+  apiKey: 'AIzaSyCUsnkI40wijMQP9UE6NANpWWfDVGrk7s4',
+  authDomain: 'skengineering-e80b7.firebaseapp.com',
+  databaseURL: 'https://skengineering-e80b7.firebaseio.com',
+  projectId: 'skengineering-e80b7',
+  storageBucket: 'skengineering-e80b7.appspot.com',
+  messagingSenderId: '239386548967',
+  appId: '1:239386548967:web:5bc5a5204721f29ecf2042'
 };
 // Initialize Firebase
-// firebase.initializeApp(firebaseConfig);
-
 firebase.initializeApp(firebaseConfig);
-var firestore = firebase.firestore();
+//Reference for form collection(3)
+let formMessage = firebase.database().ref('register');
 
-let submit = document.querySelector('#submit');
-let company = document.querySelector('#company');
-let name = document.querySelector('#name');
-let mobile = document.querySelector('#mobile');
-let email = document.querySelector('#email');
-let message = document.querySelector('#message');
+//listen for submit event//(1)
+document
+  .getElementById('registrationform')
+  .addEventListener('submit', formSubmit);
 
-const db = firestore.collection('ContactData');
+//Submit form(1.2)
+function formSubmit(e) {
+  e.preventDefault();
+  // Get Values from the DOM
+  let company = document.querySelector('#company').value;
+  let name = document.querySelector('#name').value;
+  let mobile = document.querySelector('#mobile').value;
+  let email = document.querySelector('#email').value;
+  let message = document.querySelector('#message').value;
+  // let interest = document.querySelector('#interest').value;
 
-submit.addEventListener('click', function() {
-  let companyInput = company.value;
-  let nameInput = name.value;
-  let mobileInput = mobile.value;
-  let emailInput = email.value;
-  let messageInput = message.value;
+  //send message values
+  sendMessage(company, name, mobile, email, message);
 
-  db.doc()
-    .set({
-      company: companyInput,
-      name: nameInput,
-      mobile: mobileInput,
-      email: emailInput,
-      message: messageInput
-    })
-    .then(function() {
-      alert('Submitted');
-    });
-});
+  //Show Alert Message(5)
+  document.querySelector('.alert').style.display = 'block';
+
+  //Hide Alert Message After Seven Seconds(6)
+  setTimeout(function() {
+    document.querySelector('.alert').style.display = 'none';
+  }, 7000);
+
+  //Form Reset After Submission(7)
+  document.getElementById('registrationform').reset();
+}
+
+//Send Message to Firebase(4)
+
+function sendMessage(company, name, mobile, email, message) {
+  let newFormMessage = formMessage.push();
+  newFormMessage.set({
+    company: company,
+    name: name,
+    mobile: mobile,
+    email: email,
+    message: message
+  });
+}
