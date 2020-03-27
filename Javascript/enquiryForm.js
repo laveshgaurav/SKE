@@ -54,4 +54,5 @@ function sendMessage(company, name, mobile, email, message) {
     email: email,
     message: message
   });
+  alert(`${name} Thank You! Your Form Has Been Submitted.`);
 }
