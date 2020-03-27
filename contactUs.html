@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/4e6ac1efa4.js" crossorigin="anonymous"></script>
+
+    <!-- Local CSS -->
+    <link href="./CSS/main.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+
+
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>S K Engineering</title>
+</head>
+
+<body>
+
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">S.K. Engineering</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./aboutUs.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./productAndServices.html">Products And Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./qualityControl.html">Quality Control</a>
+                </li>
+                <li class="nav-item  active">
+                    <a class="nav-link" href="./contactUs.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- contact form and map -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 p-4" data-aos="fade-right">
+                <div class="head text-center">
+                    <h4 class="header-pseudo">ENQUIRY FORM</h4>
+                </div>
+                <form autocomplete="on">
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" class="form-control" id="company" placeholder="Company Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="number" class="form-control" id="mobile" placeholder="Mobile Number">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <input type="text" class="form-control" id="message" placeholder="Message">
+                    </div>
+                    <button onclick="writeData()" type="submit" class="btn btn-primary" id="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 p-4" data-aos="fade-right">
+                <div class="head text-center">
+                    <h4 class="header-pseudo">CORPORATE OFFICE</h4>
+                </div>
+                <iframe class="p-3"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.631174953466!2d88.37955831424134!3d22.5554849392845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02768cd2010c31%3A0x8804a61e02941b7f!2sS.K%20ENGINEERING%20WORKS!5e0!3m2!1sen!2sin!4v1585304870114!5m2!1sen!2sin"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Bootstrap JS Cdn -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <!-- GSAP Animation -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js"></script>
+
+
+
+        <!-- AOS Animation -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.0/firebase-firestore.js"></script>
+        <script src="./Javascript/enquiryForm.js"></script>
+
+
+</body>
+
+</html>

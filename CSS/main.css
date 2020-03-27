@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap");
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.carousel-item img {
+  width: 50%;
+  height: auto;
+}
+
+.head h3,
+.head h4,
+.head h5,
+.head h6 {
+  color: white;
+  z-index: 9;
+}
+
+.head .box {
+  height: 64px;
+  width: 200px;
+  background-color: #6C63FF;
+  position: absolute;
+  top: 0;
+  border-radius: 8px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: -1;
+}
+
+.para {
+  margin-top: 30px;
+}
+
+.para p {
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  -webkit-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+
+a:hover {
+  color: red;
+}
+
+.fab,
+.far {
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+
+.fa-facebook {
+  color: #3b5998;
+}
+
+.fa-instagram {
+  color: #8a3ab9;
+}
+
+.fa-twitter {
+  color: #00acee;
+}
+
+@media (max-width: 426px) {
+  h4 {
+    font-size: 0.8rem !important;
+  }
+  .quality_control_box {
+    height: 60px !important;
+    width: 90% !important;
+  }
+  .quality_control {
+    font-size: 1.2rem !important;
+  }
+  .wiring {
+    font-size: 1rem !important;
+  }
+}
+
+@media (min-width: 430px) {
+  .quality_control_box {
+    height: 50px !important;
+    width: 90% !important;
+  }
+  .quality_control {
+    font-size: 1.4rem !important;
+  }
+}
+
+.product_range {
+  padding: 12px;
+}
+
+.product_range li {
+  list-style: decimal-leading-zero;
+}
+
+.product_range li a {
+  text-decoration: none;
+  color: #6C63FF;
+  -webkit-transition: 0.6s ease-out;
+  transition: 0.6s ease-out;
+}
+
+.product_range li a:hover {
+  color: red;
+  letter-spacing: 2px;
+}
+
+.header-pseudo {
+  position: relative;
+  z-index: 9;
+  padding: 1rem;
+}
+
+.header-pseudo::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 95%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 0;
+  background-color: #6C63FF;
+  border-radius: 10px;
+  z-index: -1;
+}
+/*# sourceMappingURL=main.css.map */

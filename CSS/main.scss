@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.carousel-item {
+    img {
+        width: 50%;
+        height: auto;
+    }
+}
+
+.head {
+
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: rgb(255, 255, 255);
+        z-index: 9;
+    }
+
+    .box {
+        height: 64px;
+        width: 200px;
+        background-color: #6C63FF;
+        position: absolute;
+        top: 0;
+        border-radius: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+}
+
+.para {
+    margin-top: 30px;
+
+    p {
+        text-align: justify;
+    }
+}
+
+// .about-img {
+//     position: relative;
+//     top: 50%;
+//     transform: translateY(-50%);
+// }
+a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.5s ease-in;
+}
+
+a:hover {
+    color: red;
+}
+
+.fab,
+.far {
+    font-weight: 400;
+    font-size: 2.4rem;
+
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-instagram {
+    color: #8a3ab9;
+}
+
+.fa-twitter {
+    color: #00acee
+}
+
+
+@media (max-width: 426px) {
+    h4 {
+        font-size: 0.8rem !important;
+    }
+
+    .quality_control_box {
+        height: 60px !important;
+        width: 90% !important;
+
+    }
+
+    .quality_control {
+        font-size: 1.2rem !important;
+    }
+
+    .wiring {
+        font-size: 1rem !important;
+    }
+
+}
+
+@media (min-width: 430px) {
+
+
+    .quality_control_box {
+        height: 50px !important;
+        width: 90% !important;
+
+    }
+
+    .quality_control {
+        font-size: 1.4rem !important;
+    }
+
+}
+
+
+.product_range {
+    padding: 12px;
+
+    li {
+        list-style: decimal-leading-zero;
+
+        a {
+            text-decoration: none;
+            color: #6C63FF;
+            transition: 0.6s ease-out;
+        }
+
+        a:hover {
+            color: red;
+            letter-spacing: 2px;
+        }
+    }
+}
+
+// .box-1 {
+//     width: 300px;
+//     background-color: red;
+//     height: 40px;
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+// }
+.header-pseudo {
+    position: relative;
+    z-index: 9;
+    padding: 1rem;
+}
+
+.header-pseudo::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    background-color: #6C63FF;
+    border-radius: 10px;
+    z-index: -1;
+}
