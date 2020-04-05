@@ -1,11 +1,11 @@
 var firebaseConfig = {
-  apiKey: 'AIzaSyCUsnkI40wijMQP9UE6NANpWWfDVGrk7s4',
-  authDomain: 'skengineering-e80b7.firebaseapp.com',
-  databaseURL: 'https://skengineering-e80b7.firebaseio.com',
-  projectId: 'skengineering-e80b7',
-  storageBucket: 'skengineering-e80b7.appspot.com',
-  messagingSenderId: '239386548967',
-  appId: '1:239386548967:web:5bc5a5204721f29ecf2042'
+  apiKey: 'AIzaSyBSLxdp6R8tWAJBVmtDHEXCcFNj8-yQfdQ',
+  authDomain: 'skewkolkata.firebaseapp.com',
+  databaseURL: 'https://skewkolkata.firebaseio.com',
+  projectId: 'skewkolkata',
+  storageBucket: 'skewkolkata.appspot.com',
+  messagingSenderId: '331733718942',
+  appId: '1:331733718942:web:b82635d456342b6914288f',
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -35,7 +35,7 @@ function formSubmit(e) {
   document.querySelector('.alert').style.display = 'block';
 
   //Hide Alert Message After Seven Seconds(6)
-  setTimeout(function() {
+  setTimeout(function () {
     document.querySelector('.alert').style.display = 'none';
   }, 7000);
 
@@ -52,7 +52,7 @@ function sendMessage(company, name, mobile, email, message) {
     name: name,
     mobile: mobile,
     email: email,
-    message: message
+    message: message,
   });
   alert(`${name} Thank You! Your Form Has Been Submitted.`);
 }
